@@ -2,7 +2,7 @@ public class Checker {
     public String[] parsResult;
 
     public Checker (String[] parsResult){
-        this.parsResult = new Parcer(Parcer.inputString).parceArguments();
+       // this.parsResult = new Parser(Parser.inputString).parseArguments();
     }
 
     public String[] getParsResult() {

@@ -5,13 +5,18 @@ public class Calculator {
     public char mathAction;
     public int result;
 
+
     public Calculator(int firstArgument, int secondArgument, char mathAction){
         this.firstArgument = firstArgument;
         this.secondArgument = secondArgument;
         this.mathAction = mathAction;
     }
 
-    public /*int*/void Calculate(/*int firstArgument, int secondArgument, char mathAction*/){
+
+
+
+
+    public /*int*/void calculate(/*int firstArgument, int secondArgument, char mathAction*/){
 
         //int result;
         switch(mathAction){
