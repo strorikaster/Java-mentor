@@ -1,7 +1,7 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
+
 
 public class Calcapp {
         public static String inputString;
@@ -12,8 +12,7 @@ public class Calcapp {
         Parser parser = new Parser(inputString);
         Converter converter = new Converter(parser.parseArguments());
         Calculator calculator = new Calculator(converter.convertArguments()[0], converter.convertArguments()[1], converter.getMathOperator());
-        calculator.calculate();
-
+        System.out.println(converter.convertResult(calculator.calculate()));
         }
     }
 

@@ -1,9 +1,10 @@
 import java.sql.PreparedStatement;
+import java.util.Arrays;
 
 public class Calculator {
     public int firstArgument, secondArgument;
     public char mathAction;
-    public int result;
+    public Integer result;
 
 
     public Calculator(int firstArgument, int secondArgument, char mathAction){
@@ -16,7 +17,7 @@ public class Calculator {
 
 
 
-    public /*int*/void calculate(/*int firstArgument, int secondArgument, char mathAction*/){
+    public int /*void*/ calculate(/*int firstArgument, int secondArgument, char mathAction*/){
 
         //int result;
         switch(mathAction){
@@ -35,7 +36,12 @@ public class Calculator {
             default:
                 throw new IllegalStateException("Unexpected value: " + mathAction);
         }
-        //return result;
-        System.out.println(result);
+        return result;
+//        if (!(result instanceof Integer)) {
+//            System.out.println(RomeNumbers.convertToRomeNumbers(result));
+//        }else{
+//            System.out.println(result);
+//
+//        }
     }
 }

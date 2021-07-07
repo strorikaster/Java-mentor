@@ -19,7 +19,7 @@ public class Parser {
     }
 
         public String[] parseArguments(){
-        arguments = getInputString().replace(" ", "").split("");
+        arguments = getInputString().split(" ");
             return arguments;
     }
 }
