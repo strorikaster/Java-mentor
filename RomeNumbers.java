@@ -1,4 +1,5 @@
  public enum RomeNumbers {
+    O("O", 0),
     I("I", 1),
     II("II", 2),
     III("III", 3),

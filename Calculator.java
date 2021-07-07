@@ -13,13 +13,9 @@ public class Calculator {
         this.mathAction = mathAction;
     }
 
+    public int calculate(){
 
 
-
-
-    public int /*void*/ calculate(/*int firstArgument, int secondArgument, char mathAction*/){
-
-        //int result;
         switch(mathAction){
             case '+':
                 result = firstArgument + secondArgument;
@@ -37,11 +33,6 @@ public class Calculator {
                 throw new IllegalStateException("Unexpected value: " + mathAction);
         }
         return result;
-//        if (!(result instanceof Integer)) {
-//            System.out.println(RomeNumbers.convertToRomeNumbers(result));
-//        }else{
-//            System.out.println(result);
-//
-//        }
+
     }
 }
