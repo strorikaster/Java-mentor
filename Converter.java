@@ -11,9 +11,10 @@ public class Converter {
 
     public int[] convertArguments() {
         if ((Arrays.toString(RomeNumbers.values())).contains(arguments[0]) && (Arrays.toString(RomeNumbers.values())).contains(arguments[2])) {
+
             convertedArguments[0] = RomeNumbers.valueOf(arguments[0]).ConvertToInt(arguments[0]);
             convertedArguments[1] = RomeNumbers.valueOf(arguments[2]).ConvertToInt(arguments[2]);
-            //arguments[1].charAt(0);
+
         } else {
             convertedArguments[0] = Integer.parseInt(arguments[0]);
             convertedArguments[1] = Integer.parseInt(arguments[2]);
