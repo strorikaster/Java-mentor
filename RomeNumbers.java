@@ -1,5 +1,18 @@
- public enum RomeNumbers {
+import java.util.Map;
 
+public enum RomeNumbers {
+    _I("_I", -1),
+    _II("_II", -2),
+    _III("_III", -3),
+    _IV("_IV",-4),
+    _V("_V", -5),
+    _VI("_VI", -6),
+    _VII("_VII", -7),
+    _VIII("_VIII", -8),
+    _IX("_IX", -9),
+    _X("_X", -10),
+    _L("_L", -50),
+    _C("_C", -100),
     O("0", 0),
     I("I", 1),
     II("II", 2),
@@ -17,6 +30,7 @@
 
     private int value = 0;
     private String key = "";
+
 
     RomeNumbers(String key, int value) {
         this.key = key;
@@ -56,11 +70,11 @@
                 if (value == 0) {
                     romeValue = "0";
                 }else{
-                    if(value > 0) {
+                   // if(value > 0) {
                         romeValue = i.getKey();
-                    }else{
-                        romeValue = i.getKey();
-                    }
+                   // }/*else{
+                     //   romeValue = i.getKey();*/
+                    //}
                 }
             }
         }
@@ -75,6 +89,7 @@
                         }
                     }
                 }
+                break;
 
             case(2) :
                 for(RomeNumbers i: values()) {
@@ -86,7 +101,7 @@
                         }
                     }
                 }
-
+                break;
             case(3) :
                 for(RomeNumbers i: values()) {
                     if (i.getValue() == (value - 30)) {
@@ -97,7 +112,7 @@
                         }
                     }
                 }
-
+                break;
             case(4) :
                 for(RomeNumbers i: values()) {
                     if (i.getValue() == (value - 40)) {
@@ -108,7 +123,7 @@
                         }
                     }
                 }
-
+                break;
             case(5) :
                 for(RomeNumbers i: values()) {
                     if (i.getValue() == (value - 50)) {
@@ -119,7 +134,7 @@
                         }
                     }
                 }
-
+                break;
             case(6) :
                 for(RomeNumbers i: values()) {
                     if (i.getValue() == (value - 60)) {
@@ -130,7 +145,7 @@
                         }
                     }
                 }
-
+                break;
             case(7) :
                 for(RomeNumbers i: values()) {
                     if (i.getValue() == (value - 70)) {
@@ -141,7 +156,7 @@
                         }
                     }
                 }
-
+                break;
             case(8) :
                 for(RomeNumbers i: values()) {
                     if (i.getValue() == (value - 80)) {
@@ -152,7 +167,7 @@
                         }
                     }
                 }
-
+                break;
             case(9) :
                 for(RomeNumbers i: values()) {
                     if (i.getValue() == (value - 90)) {
@@ -163,7 +178,7 @@
                         }
                     }
                 }
-
+                break;
             case(10) :
                 for(RomeNumbers i: values()) {
                     if (i.getValue() == (value - 100)) {
@@ -174,6 +189,7 @@
                         }
                     }
                 }
+                break;
         }
         return romeValue;
     }

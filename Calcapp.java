@@ -12,12 +12,12 @@ public class Calcapp {
         inputString = reader.readLine();
         Parser parser = new Parser(inputString);
         Converter converter = new Converter(parser.parseArguments());
-//       try {
+      try {
             Calculator calculator = new Calculator(converter.convertArguments()[0], converter.convertArguments()[1], converter.getMathOperator());
             System.out.println(converter.convertResult(calculator.calculate()));
-//        }catch(NumberFormatException e) {
-//            System.out.println("Внимательно проверьте ввод, оба аргумента должны быть либо римскими либо арабскими цифрами! Перезапустите программу!!!");
-//        }
+        }catch(NumberFormatException e) {
+            System.out.println("Внимательно проверьте ввод, оба аргумента должны быть либо римскими либо арабскими цифрами! Перезапустите программу!!!");
+        }
         }
     }
 
