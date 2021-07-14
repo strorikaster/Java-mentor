@@ -5,9 +5,10 @@ import java.io.InputStreamReader;
 
 public class Calcapp {
         public static String inputString;
+
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Добро пожаловать в калькуляор");
+        System.out.println("Добро пожаловать в калькулятор");
         System.out.println("Введите аргументы от 1 до 10 и действия +, -, /, * через пробел");
         inputString = reader.readLine();
         Parser parser = new Parser(inputString);

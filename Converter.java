@@ -25,11 +25,14 @@ public class Converter {
 
     public String convertResult(int intResult){
         if ((Arrays.toString(RomeNumbers.values())).contains(arguments[0]) && (Arrays.toString(RomeNumbers.values())).contains(arguments[2])){
+            if  (intResult > 0){
             result = RomeNumbers.convertToRomeNumbers(intResult);
+            }else
+                result = "Negative rome value";
         }else{
             result = Integer.toString(intResult);
         }
-       return result;
+       return  result;
     }
 
     public char getMathOperator() {

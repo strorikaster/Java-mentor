@@ -1,18 +1,8 @@
-import java.util.Map;
+
 
 public enum RomeNumbers {
-    _I("_I", -1),
-    _II("_II", -2),
-    _III("_III", -3),
-    _IV("_IV",-4),
-    _V("_V", -5),
-    _VI("_VI", -6),
-    _VII("_VII", -7),
-    _VIII("_VIII", -8),
-    _IX("_IX", -9),
-    _X("_X", -10),
-    _L("_L", -50),
-    _C("_C", -100),
+
+
     O("0", 0),
     I("I", 1),
     II("II", 2),
@@ -26,6 +16,7 @@ public enum RomeNumbers {
     X("X", 10),
      L("L", 50),
     C("C", 100);
+
 
 
     private int value = 0;
@@ -62,20 +53,14 @@ public enum RomeNumbers {
 
     public static String convertToRomeNumbers(int value) {
         String romeValue = "";
-        //int
+
         switch (value/10){
             case(0) :
         for(RomeNumbers i: values()) {
             if (i.getValue() == (value)) {
-                if (value == 0) {
-                    romeValue = "0";
-                }else{
-                   // if(value > 0) {
+
                         romeValue = i.getKey();
-                   // }/*else{
-                     //   romeValue = i.getKey();*/
-                    //}
-                }
+
             }
         }
 
@@ -190,6 +175,9 @@ public enum RomeNumbers {
                     }
                 }
                 break;
+            default:
+                throw new IllegalStateException("Negativ rome value");
+
         }
         return romeValue;
     }
